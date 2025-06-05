@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SberMarket</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/normalize.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <img src="img/ЛОГО.svg" alt="лого">
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="Поиск товаров...">
+            <button type="submit">Найти</button>
+        </form>
+            <img class="acimg" src="img/лк.svg" alt="account">
+            <img class="bimg burger-btn" src="img/раскрыть меню.svg" alt="burger">
+
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#">Мой сбермаркет</a></li>
+                    <li><a href="#">Товары</a></li>
+                    <li><a href="#">Данные о продавцах</a></li>
+                    <li><a href="#">Цены и акции</a></li>
+                    <li><a href="#">Категории товаров</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Блок популярных товаров -->
+     <main class="main">
+        <div class="info">
+            <h1>Мой сбермаркет</h1>
+            <div class="nameLinks">
+                <h3>Название магазина</h3>
+                    <nav class="navigation">
+                        <ul class="topmenu">
+                            <li><a href="#">Изменить название</a></li>
+                            <li><a href="#">Добавить описание</a></li>
+                            <li><a href="#">Сохранить</a></li>
+                            <li><a href="/index.html">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column">
+                <a href="#">Отзывы</a>
+                <a href="#">Количество проданных товаров</a>
+            </div>
+        </div>
+        
+        <section class="popular-section">
+    <h2>Популярные товары</h2>
+    <div id="popular-products" class="products-grid">
+        <!-- Карточка 1 (со скидкой) -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Корм для кошек">
+                <div class="discount-badge">-15%</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Корм для кошек Premium</h3>
+                <p class="product-description">Полнорационный корм с курицей, 2кг</p>
+                <div class="product-price">
+                    <span class="old-price">₽1200</span>
+                    <span class="new-price">₽1020</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Игрушка для кошек">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Интерактивная игрушка</h3>
+                <p class="product-description">Мышь с кошачьей мятой</p>
+                <div class="product-price">₽350</div>
+            </div>
+        </div>
+
+        <!-- Карточка 3 (со скидкой) -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Домик для кота">
+                <div class="discount-badge">-25%</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Домик-когтеточка малый</h3>
+                <p class="product-description">Комплекс с лежанкой и столбиком</p>
+                <div class="product-price">
+                    <span class="old-price">₽4500</span>
+                    <span class="new-price">₽3375</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Миска для кота">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Двойная безопасная миска</h3>
+                <p class="product-description">Нержавеющая сталь, антискользящее дно</p>
+                <div class="product-price">₽790</div>
+            </div>
+        </div>
+
+        <!-- Карточка 5 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Наполнитель">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Древесный наполнитель</h3>
+                <p class="product-description">Экологичный, 10л</p>
+                <div class="product-price">₽650</div>
+            </div>
+        </div>
+
+        <!-- Карточка 6 (со скидкой) -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Переноска">
+                <div class="discount-badge">-10%</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Переноска для кошек малая</h3>
+                <p class="product-description">Пластиковая с металлической дверцей</p>
+                <div class="product-price">
+                    <span class="old-price">₽2800</span>
+                    <span class="new-price">₽2520</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<h2>Все товары</h2>
+    <div id="popular-products" class="products-grid">
+        <!-- Карточка 1 (со скидкой) -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Корм для кошек">
+                <div class="discount-badge">-15%</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Корм для кошек Premium</h3>
+                <p class="product-description">Полнорационный корм с курицей, 2кг</p>
+                <div class="product-price">
+                    <span class="old-price">₽1200</span>
+                    <span class="new-price">₽1020</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Игрушка для кошек">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Интерактивная игрушка</h3>
+                <p class="product-description">Мышь с кошачьей мятой</p>
+                <div class="product-price">₽350</div>
+            </div>
+        </div>
+
+        <!-- Карточка 3 (со скидкой) -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Домик для кота">
+                <div class="discount-badge">-25%</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Домик-когтеточка малый</h3>
+                <p class="product-description">Комплекс с лежанкой и столбиком</p>
+                <div class="product-price">
+                    <span class="old-price">₽4500</span>
+                    <span class="new-price">₽3375</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Миска для кота">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Двойная безопасная миска</h3>
+                <p class="product-description">Нержавеющая сталь, антискользящее дно</p>
+                <div class="product-price">₽790</div>
+            </div>
+        </div>
+
+        <!-- Карточка 5 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Наполнитель">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Древесный наполнитель</h3>
+                <p class="product-description">Экологичный, 10л</p>
+                <div class="product-price">₽650</div>
+            </div>
+        </div>
+
+        <!-- Карточка 6 (со скидкой) -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/card.png" alt="Переноска">
+                <div class="discount-badge">-10%</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Переноска для кошек малая</h3>
+                <p class="product-description">Пластиковая с металлической дверцей</p>
+                <div class="product-price">
+                    <span class="old-price">₽2800</span>
+                    <span class="new-price">₽2520</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </section>
+
+    <!-- Блок категорий -->
+    <section class="categories-section">
+        <!-- ... -->
+    </section>
+     </main>
+    
+
+    <script src="/static/js/SearchBar.js"></script>
+    <script src="/static/js/PopularProducts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPopularProducts();
+        });
+    </script>
+    <script src="/static/js/burger.js"></script>
+</body>
+</html>

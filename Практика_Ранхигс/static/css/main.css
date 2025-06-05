@@ -1,0 +1,347 @@
+.header {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+}
+
+.bimg {
+    height: 30px;
+}
+
+.acimg {
+    height: 35px;
+}
+
+/* Стили для бургер-меню */
+.burger-btn {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1003; /* Выше чем шапка */
+}
+
+.burger-btn.active {
+    transform: rotate(90deg);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #D9D9D9;
+    z-index: 1002;
+    transition: right 0.3s ease;
+    padding-top: 80px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav li {
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mobile-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+/* Затемнение фона */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1001;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Адаптация шапки */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+    
+    .search-form {
+        width: 50%;
+    }
+}
+
+.search-form {
+    position: relative;
+    width: 70%;
+}
+
+.search-form input, .search-form button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.search-form input {
+    background: #fff;
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 42px;
+}
+
+.search-form button {
+
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.search-form button::before {
+    color: #000;
+}
+
+.main {
+    padding: 20px 100px;
+}
+
+.nameLinks {
+  display: flex;               
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.nameLinks h3 {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+.navigation {
+  display: inline-block;
+  position: relative;
+  z-index: 1001;
+}
+
+.nameLinks h3 {
+  margin-right: auto;
+}
+
+ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.topmenu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.topmenu > li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+
+.topmenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  outline: none;
+  color: #838383;
+  transition: 0.3s ease;
+}
+
+.fa-angle-down {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.topmenu > li:hover .fa-angle-down {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background: #575757;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.submenu a {
+    color: #fff;
+}
+
+.topmenu > li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu li a {
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #575757;
+}
+
+.submenu li:last-child a {
+  border-bottom: none;
+}
+
+.submenu li a:hover {
+  background: #666666;
+}
+
+.column {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.column a {
+  display: block;
+  padding-right: 30px;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+}
+
+/* Стили для секции */
+.popular-section {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+.popular-section h2 {
+    font-size: 28px;
+    margin: 0 0 30px;
+    color: #000000;
+    font-family: 'Lora', serif;
+}
+
+/* Сетка карточек */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Стили карточки */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+    background: white;
+}
+
+.product-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+/* Бейдж скидки */
+.discount-badge {
+    position: absolute;
+    top: 150px;
+    right: 8px;
+    background: #3C3C3C;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Информация о товаре */
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.product-description {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    height: 40px;
+    overflow: hidden;
+}
+
+/* Стили цены */
+.product-price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.new-price {
+    color: #000000;
+    font-weight: bold;
+}
+
+.main h2 {
+    padding-top: 30px;
+}
